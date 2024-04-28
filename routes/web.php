@@ -75,14 +75,16 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
-dd("test");
+// Route::get('/test',function () {
+//     dd("test route");
+// });
 
 // // AUTH ROUTES
 // Route::middleware(['middleware' => 'PreventBackHistory'])->group(function () {
 //     require __DIR__.'/auth.php';
 // });
 
-// FRONTEND ROUTES
+//FRONTEND ROUTES
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index');
     Route::get('/blog/{slug}', 'blogShow')->name('blogs.show');
@@ -113,7 +115,7 @@ Route::controller(HomeController::class)->group(function () {
 // });
 
 // // LOCALE ROUTES
-// Route::get('/locale/{lang}', [LocaleController::class, 'language'])->name('locale');
+Route::get('/locale/{lang}', [LocaleController::class, 'language'])->name('locale');
 
 // // UPDATE ROUTE
 // Route::get('/update/now', [UpdateController::class, 'updateDatabase']);
