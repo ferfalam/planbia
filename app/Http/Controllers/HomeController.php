@@ -24,13 +24,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // return redirect('login');
 
-        $review_exists = Review::count();   
+        $review_exists = Review::count();
         $reviews = Review::all();
 
         $information = $this->metadataInformation();
 
-        $faq_exists = Faq::count();        
+        $faq_exists = Faq::count();
         $faqs = Faq::where('status', 'visible')->get();
 
         $blog_exists = Blog::count();
@@ -46,8 +47,8 @@ class HomeController extends Controller
         $lifetime_subscriptions = SubscriptionPlan::where('status', 'active')->where('payment_frequency', 'lifetime')->get();
         $prepaids = PrepaidPlan::where('status', 'active')->get();
 
-        $other_templates = Template::orderBy('group', 'asc')->where('status', true)->get();  
-        $custom_templates = CustomTemplate::orderBy('group', 'asc')->where('status', true)->get();  
+        $other_templates = Template::orderBy('group', 'asc')->where('status', true)->get();
+        $custom_templates = CustomTemplate::orderBy('group', 'asc')->where('status', true)->get();
 
         return view('home', compact('information', 'blog_exists', 'blogs', 'faq_exists', 'faqs', 'review_exists', 'reviews', 'monthly', 'yearly', 'monthly_subscriptions', 'yearly_subscriptions', 'prepaids', 'prepaid', 'other_templates', 'custom_templates', 'lifetime', 'lifetime_subscriptions'));
     }
@@ -55,9 +56,9 @@ class HomeController extends Controller
 
     /**
      * Display terms & conditions page
-     * 
+     *
      */
-    public function termsAndConditions() 
+    public function termsAndConditions()
     {
         $information = $this->metadataInformation();
 
@@ -77,9 +78,9 @@ class HomeController extends Controller
 
     /**
      * Display privacy policy page
-     * 
+     *
      */
-    public function privacyPolicy() 
+    public function privacyPolicy()
     {
         $information = $this->metadataInformation();
 
@@ -99,7 +100,7 @@ class HomeController extends Controller
 
     /**
      * Frontend show blog
-     * 
+     *
      */
     public function blogShow($slug)
     {
@@ -126,7 +127,7 @@ class HomeController extends Controller
 
     /**
      * Frontend contact us form record
-     * 
+     *
      */
     public function contact(Request $request)
     {
@@ -151,11 +152,11 @@ class HomeController extends Controller
                 try {
 
                     Mail::to(config('mail.from.address'))->send(new ContactFormEmail($request));
- 
+
                     if (Mail::flushMacros()) {
                         return redirect()->back()->with('error', 'Sending email failed, please try again.');
                     }
-                    
+
                 } catch (\Exception $e) {
                     return redirect()->back()->with('error', 'SMTP settings were not set yet, please contact support team. ' . $e->getMessage());
                 }
@@ -165,13 +166,13 @@ class HomeController extends Controller
             } else {
                 return redirect()->back()->with('error', 'Google reCaptcha Validation has Failed');
             }
-        
+
         } else {
 
             try {
 
                 Mail::to(config('mail.from.address'))->send(new ContactFormEmail($request));
- 
+
                 if (Mail::flushMacros()) {
                     return redirect()->back()->with('error', 'Sending email failed, please try again.');
                 }
@@ -181,13 +182,13 @@ class HomeController extends Controller
             }
 
             return redirect()->back()->with('success', 'Email was successfully sent');
-        }  
+        }
     }
 
 
     /**
      * Verify reCaptch for frontend contact us page (if enabled)
-     * 
+     *
      */
     private function reCaptchaCheck($recaptcha)
     {
