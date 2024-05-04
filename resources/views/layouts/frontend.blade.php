@@ -59,13 +59,15 @@
 
 							<div class="relative flex items-top justify-center min-h-screen">
 
-								<div class="container-fluid fixed-top" id="navbar-container">
+								{{-- <div class="container-fluid minimize-bar" id="navbar-container"> --}}
+                                    <div class="container-fluid fixed-top" id="navbar-container">
 
 									<div class="container">
 										<div class="row">
 
 											<nav class="navbar navbar-expand-lg navbar-light w-100" id="navbar-responsive">
-												<a class="navbar-brand" href="{{ url('/') }}"><img id="brand-img"  src="{{ URL::asset('img/brand/logo.png') }}" alt=""></a>
+                                                <span style="display: none" id="image-url">{{ URL::asset('img/brand/') }}</span>
+												<a class="navbar-brand" href="{{ url('/') }}"><img id="brand-img" alt=""></a>
 												<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 													<span class="navbar-toggler-icon"></span>
 												</button>
