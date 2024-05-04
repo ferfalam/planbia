@@ -21,7 +21,7 @@
                                 <h1 class=" mb-0 gradient fixed-height" id="typed" data-aos="fade-left" data-aos-delay="600" data-aos-once="true" data-aos-duration="900"></h1>
                                 <p class="fs-18 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Let AI create content for blogs, articles, websites, social media and more') }}</p>
 
-                                <a href="{{ env('APP_DASHBOARD_URL').'/register' }}" class="btn btn-primary special-action-button" data-aos="fade-left" data-aos-delay="800" data-aos-once="true" data-aos-duration="1100">{{ __('Try Now For Free') }}</a>
+                                <a target="_blank" href="{{ route('register') }}" class="btn btn-primary special-action-button" data-aos="fade-left" data-aos-delay="800" data-aos-once="true" data-aos-duration="1100">{{ __('Try Now For Free') }}</a>
 
                             </div>
                         </div>

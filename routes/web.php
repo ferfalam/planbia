@@ -63,6 +63,7 @@ use App\Http\Controllers\User\UserSupportController;
 use App\Http\Controllers\User\UserNotificationController;
 use App\Http\Controllers\User\SearchController;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Redirect;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,6 +84,13 @@ use Illuminate\Support\Facades\Artisan;
 // Route::middleware(['middleware' => 'PreventBackHistory'])->group(function () {
 //     require __DIR__.'/auth.php';
 // });
+
+Route::get('/register', function () {
+    return Redirect::to(env('APP_DASHBOARD_URL').'/register');
+})->name('register');
+Route::get('/login', function () {
+    return Redirect::to(env('APP_DASHBOARD_URL').'/register');
+})->name('login');
 
 //FRONTEND ROUTES
 Route::controller(HomeController::class)->group(function () {

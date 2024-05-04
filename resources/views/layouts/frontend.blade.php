@@ -101,11 +101,11 @@
 																	{{-- @auth --}}
 																		{{-- <a href="{{ route('user.templates') }}" class="action-button dashboard-button pl-5 pr-5">{{ __('Dashboard') }}</a> --}}
 																	{{-- @else --}}
-																		<a href="{{ env('APP_DASHBOARD_URL').'/login' }}" class="btn btn-primary special-action-button" id="login-button">{{ __('Login') }}</a>
+																		<a href="{{ route('login') }}" target="_blank" class="btn btn-primary special-action-button" id="login-button">{{ __('Login') }}</a>
 
 																		{{-- @if (config('settings.registration') == 'enabled') --}}
 																			{{-- @if (Route::has('register')) --}}
-																				<a href="{{ env('APP_DASHBOARD_URL').'/register' }}" class="ml-2 action-button register-button pl-5 pr-5">{{ __('Try For Free Now') }}</a>
+																				<a href="{{ route('register') }}" target="_blank" class="ml-2 action-button register-button pl-5 pr-5">{{ __('Try Now For Free') }}</a>
 																			{{-- @endif --}}
 																		{{-- @endif --}}
 																	{{-- @endauth --}}
@@ -199,8 +199,8 @@
 										<h5>{{ __('Site Pages') }}</h5>
 
 										<ul class="list-unstyled">
-											<li><a href="{{ env('APP_DASHBOARD_URL').'/login' }}">{{ __('Login') }}</a></li>
-											<li><a href="{{ env('APP_DASHBOARD_URL').'/register' }}">{{ __('Try Now For Free') }}</a></li>
+											<li><a href="{{ route('login')}}" target="_blank">{{ __('Login') }}</a></li>
+											<li><a href="{{ route('register') }}" target="_blank">{{ __('Try Now For Free') }}</a></li>
 										</ul>
 
 									</div> <!-- END SOLUTIONS LINKS -->
@@ -244,7 +244,7 @@
 
 										<h5 class="mt-6 mb-4">{{ __('Get Started Today') }}</h5>
 
-										<a href="{{ env('APP_DASHBOARD_URL').'/register' }}" class="btn btn-primary pl-5 pr-5">{{ __('Try For Free Now') }}</a>
+										<a href="{{ route('register') }}" class="btn btn-primary pl-5 pr-5">{{ __('Try Now For Free') }}</a>
 
 									</div> <!-- END CONNECTION & NEWS LINKS -->
 
