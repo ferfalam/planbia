@@ -1,4 +1,4 @@
-/* ==========================================================================           
+/* ==========================================================================
  *
  *    TEMPLATES
  *
@@ -23,7 +23,7 @@
 			color: #087990;
 			border-radius: 5px;
 		}
-		
+
 	}
 }
 
@@ -46,12 +46,12 @@
 			color: #087990;
 			border-radius: 5px;
 		}
-		
+
 	}
 }
 
 .awselect-icon-style {
-	
+
 	i.email-icon {
 		font-size: 16px;
 		padding: 7px;
@@ -100,7 +100,7 @@
 	#save-button i {
 		background: $primaryTextActiveColor!important;
 		color: #FFF!important;
-	
+
 		&:hover, &:focus {
 			background: $primaryTextColor!important;
 		}
@@ -119,7 +119,7 @@ i.blog-icon {
 	font-size: 16px;
 	padding: 7px;
 	background: #E1F0FF;
-	color: #007bff;
+	color: #8c52ff;
 	border-radius: 5px;
 }
 
@@ -165,7 +165,7 @@ i.video-icon {
 
 .category-blog {
 	background: #E1F0FF;
-	color: #007bff;
+	color: #8c52ff;
 }
 
 .category-video {
@@ -213,13 +213,13 @@ i.video-icon {
 			background-color: #FFF;
 			border: none;
 			box-shadow: 0 1px 3px 0 rgb(50 50 50 / 20%), 0 2px 1px -1px rgb(50 50 50 / 12%), 0 1px 1px 0 rgb(50 50 50 / 14%);
-		
+
 			&:hover {
 				color: $white !important;
 				background-color: $primaryTextColor;
 				border-color: $primaryTextColor;
 			}
-		
+
 			&:focus, &.focus {
 				background-color: $btnMainBGColor;
 				border-color: $btnMainBGColor;
@@ -233,7 +233,7 @@ i.video-icon {
 	}
 }
 
-/* ==========================================================================           
+/* ==========================================================================
  *
  *    CUSTOM TEMPLATES
  *
@@ -272,7 +272,7 @@ i.video-icon {
 	span {
 		border-top-right-radius: 35px!important;
     	border-bottom-right-radius: 35px!important;
-		
+
 		i {
 			line-height: 2.6;
 		}

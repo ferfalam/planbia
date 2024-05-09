@@ -506,7 +506,7 @@
     text-decoration: none;
     background: $body-background;
     color: $text-color;
-    border-left: 3px solid #007BFF;
+    border-left: 3px solid #8c52ff;
     transition: border-left 0.2s ease-in-out, color 0.2s ease;
   }
 
@@ -743,7 +743,7 @@
       width: 70px;
       overflow: hidden;
       -webkit-transition: left 0.3s ease, width 0.3s ease;
-      transition: left 0.3s ease, width 0.3s ease; 
+      transition: left 0.3s ease, width 0.3s ease;
 	  max-height:fit-content;
     }
 
@@ -856,7 +856,7 @@
 
   }
 
-  
+
   .sidebar-mini.sidenav-toggled .app-sidebar__user .avatar-md {
     margin: 0 auto;
   }
@@ -1365,7 +1365,7 @@
 
 .app-sidebar__logo {
   padding: 13px 15px;
-  height: 74px; 
+  height: 74px;
   text-align: center;
   width: 250px;
   z-index: 999999;
@@ -1455,7 +1455,7 @@
     .slide a.side-menu__item.active:after {
       top: 20px;
     }
- 
+
   }
 
   .sidenav-toggled.sidenav-toggled1 {
@@ -1679,7 +1679,7 @@
 .app.sidebar-mini.sidenav-toggled .slide.active.is-expanded .side-menu__item {
   border-radius: 0;
 }
-@media (min-width: 767px) { 
+@media (min-width: 767px) {
 	.sidebar-mini.sidenav-toggled .app-sidebar{
        max-height:100%;
 	}

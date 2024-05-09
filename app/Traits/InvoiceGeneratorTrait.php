@@ -13,10 +13,10 @@ trait InvoiceGeneratorTrait
 {
     /**
      * Handle and create invoice after each payment or for past payments
-     * 
+     *
      */
     public function generateInvoice($order_id)
-    {   
+    {
         $invoice_rows = ['invoice_currency', 'invoice_language', 'invoice_vendor', 'invoice_vendor_website', 'invoice_address', 'invoice_city', 'invoice_state', 'invoice_postal_code', 'invoice_country', 'invoice_phone', 'invoice_vat_number'];
         $invoice = [];
         $settings = Setting::all();
@@ -61,34 +61,34 @@ trait InvoiceGeneratorTrait
         $language = $invoice['invoice_language'];
 
         $invoice = new InvoicePrinter($size, $currency, $language);
-        
+
         /* Header settings */
         $invoice->setLogo("img/brand/logo.png");
-        $invoice->setColor("#007Bff");      // pdf color scheme
+        $invoice->setColor("#8c52ff");      // pdf color scheme
         $invoice->setType("Invoice");    // Invoice Type
         $invoice->setReference($order_id);   // Reference
         $invoice->setDate(date('M dS ,Y',time()));   //Billing Date
         $invoice->setTime(date('h:i:s A',time()));   //Billing Time
         $invoice->setFrom($serviceProvider);
         $invoice->setTo($serviceUser);
-        
+
         $invoice->addItem('Plan Name: '. $plan->plan_name, $description, 1, $tax_total, $plan->price, 0, $total);
-        
+
         $invoice->addTotal("Total", $total);
         $invoice->addTotal("VAT ". config('payment.payment_tax') ."%", $tax_total);
         $invoice->addTotal("Total Paid", $final_total, true);
-        
-        $invoice->addBadge("Payment Paid");        
-        $invoice->addTitle("Important Notice");        
-        $invoice->addParagraph("All subscription cancellations will be processed by the next month.");        
+
+        $invoice->addBadge("Payment Paid");
+        $invoice->addTitle("Important Notice");
+        $invoice->addParagraph("All subscription cancellations will be processed by the next month.");
         $invoice->setFooternote(config('payment.company.name'),);
-        
-        $invoice->render('invoice.pdf','D'); 
+
+        $invoice->render('invoice.pdf','D');
     }
 
 
     public function bankTransferInvoice($order_id)
-    {   
+    {
         $invoice_rows = ['bank_requisites'];
         $invoice = [];
         $settings = Setting::all();
@@ -117,34 +117,34 @@ trait InvoiceGeneratorTrait
         $language = 'en';
 
         $invoice = new InvoicePrinter($size, $currency, $language);
-        
+
         /* Header settings */
         $invoice->setLogo("img/brand/logo.png");
-        $invoice->setColor("#007Bff");      // pdf color scheme
+        $invoice->setColor("#8c52ff");      // pdf color scheme
         $invoice->setType("Invoice");    // Invoice Type
         $invoice->setReference($id->order_id);   // Reference
         $invoice->setDate(date('M dS ,Y',time()));   //Billing Date
         $invoice->setTime(date('h:i:s A',time()));   //Billing Time
         $invoice->setFrom($serviceProvider);
         $invoice->hideToFromHeaders();
-        
+
         $invoice->addItem('Plan Name: '. $plan->plan_name, $description, 1, $tax_total, $plan->price, 0, $total);
-        
+
         $invoice->addTotal("Total", $total);
         $invoice->addTotal("VAT ". config('payment.payment_tax') ."%", $tax_total);
         $invoice->addTotal("Total Due", $id->amount, true);
-        
-        $invoice->addBadge("Payment Pending", '#f00');        
-        $invoice->addTitle("Important Notice");        
-        $invoice->addParagraph("All subscription cancellations will be processed by the next month.");        
+
+        $invoice->addBadge("Payment Pending", '#f00');
+        $invoice->addTitle("Important Notice");
+        $invoice->addParagraph("All subscription cancellations will be processed by the next month.");
         $invoice->setFooternote(config('payment.company.name'),);
-        
-        $invoice->render('invoice.pdf','D'); 
+
+        $invoice->render('invoice.pdf','D');
     }
 
 
     public function showInvoice(Payment $id)
-    {   
+    {
         $invoice_rows = ['invoice_currency', 'invoice_language', 'invoice_vendor', 'invoice_vendor_website', 'invoice_address', 'invoice_city', 'invoice_state', 'invoice_postal_code', 'invoice_country', 'invoice_phone', 'invoice_vat_number'];
         $invoice = [];
         $settings = Setting::all();
@@ -186,28 +186,28 @@ trait InvoiceGeneratorTrait
         $language = $invoice['invoice_language'];
 
         $invoice = new InvoicePrinter($size, $currency, $language);
-        
+
         /* Header settings */
         $invoice->setLogo("img/brand/logo.png");
-        $invoice->setColor("#007Bff");      // pdf color scheme
+        $invoice->setColor("#8c52ff");      // pdf color scheme
         $invoice->setType("Invoice");    // Invoice Type
         $invoice->setReference($id->order_id);   // Reference
         $invoice->setDate(date('M dS ,Y',time()));   //Billing Date
         $invoice->setTime(date('h:i:s A',time()));   //Billing Time
         $invoice->setFrom($serviceProvider);
         $invoice->setTo($serviceUser);
-        
+
         $invoice->addItem('Plan Name: '. $plan->plan_name, $description, 1, $tax_total, $plan->price, 0, $total);
-        
+
         $invoice->addTotal("Total", $total);
         $invoice->addTotal("VAT ". config('payment.payment_tax') ."%", $tax_total);
         $invoice->addTotal("Total Paid", $id->amount, true);
-        
-        $invoice->addBadge("Payment Paid");        
-        $invoice->addTitle("Important Notice");        
-        $invoice->addParagraph("All subscription cancellations will be processed by the next month.");        
+
+        $invoice->addBadge("Payment Paid");
+        $invoice->addTitle("Important Notice");
+        $invoice->addParagraph("All subscription cancellations will be processed by the next month.");
         $invoice->setFooternote(config('payment.company.name'),);
-        
-        $invoice->render('invoice.pdf','D'); 
+
+        $invoice->render('invoice.pdf','D');
     }
 }

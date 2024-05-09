@@ -39,12 +39,12 @@
             }
             .error-main p{
                 color: #9897A0;
-                font-size: 15px; 
+                font-size: 15px;
             }
             .special-action-button {
                 font-family: "Poppins", sans-serif;
                 font-size: 12px;
-                background-color: #007BFF;
+                background-color: #8c52ff;
                 padding-left: 2rem;
                 padding-right: 2rem;
                 text-transform: none;

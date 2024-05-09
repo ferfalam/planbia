@@ -67,7 +67,8 @@
 
 											<nav class="navbar navbar-expand-lg navbar-light w-100" id="navbar-responsive">
                                                 <span style="display: none" id="image-url">{{ URL::asset('img/brand/') }}</span>
-												<a class="navbar-brand" href="{{ url('/') }}"><img id="brand-img" alt=""></a>
+												<a class="navbar-brand d-none d-md-block" href="{{ url('/') }}"><img id="brand-img" alt=""></a>
+												<a class="navbar-brand d-block d-md-none" href="{{ url('/') }}"><img id="brand-mobile-img" src="{{ URL::asset('img/brand/logo-dark.png') }}" alt=""></a>
 												<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 													<span class="navbar-toggler-icon"></span>
 												</button>
@@ -105,9 +106,10 @@
 																	{{-- @else --}}
 																		<a href="{{ route('login') }}" target="_blank" class="btn btn-primary special-action-button" id="login-button">{{ __('Login') }}</a>
 
+                                                                        <br class="d-block d-md-none">
 																		{{-- @if (config('settings.registration') == 'enabled') --}}
 																			{{-- @if (Route::has('register')) --}}
-																				<a href="{{ route('register') }}" target="_blank" class="ml-2 action-button register-button pl-5 pr-5">{{ __('Try Now For Free') }}</a>
+																		<a href="{{ route('register') }}" target="_blank" class="ml-2 action-button register-button pl-5 pr-5">{{ __('Try Now For Free') }}</a>
 																			{{-- @endif --}}
 																		{{-- @endif --}}
 																	{{-- @endauth --}}
@@ -153,7 +155,7 @@
 
 								<img src="{{ URL::asset('img/brand/logo-white.png') }}" alt="Brand Logo">
 
-								<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut culpa maiores maxime illo nostrum aut totam, porro dolore minima</p>
+								<p class="mb-0">{{__('Your new ally in writing dissertations, theses, and any other academic document. We combine state-of-the-art artificial intelligence with a user-friendly interface to give you an unparalleled writing experience.')}}</p>
 
 								<div class="dropdown header-locale" id="frontend-local">
 									<a class="nav-link icon" data-bs-toggle="dropdown">
@@ -184,7 +186,7 @@
 								<div class="row w-100">
 
 									<!-- INFORMATION LINKS -->
-									<div class="col-md-3 col-sm-12">
+									{{-- <div class="col-md-3 col-sm-12">
 
 										<h5>{{ __('Information') }}</h5>
 
@@ -192,11 +194,11 @@
 											<li><a href="#" target="_blank">{{ __('AI World') }}</a></li>
 										</ul>
 
-									</div> <!-- END INFORMATION LINKS -->
+									</div> <!-- END INFORMATION LINKS --> --}}
 
 
 									<!-- SOLUTIONS LINKS -->
-									<div class="col-md-3 col-sm-12">
+									<div class="col-md-4 col-sm-12">
 
 										<h5>{{ __('Site Pages') }}</h5>
 
@@ -209,7 +211,7 @@
 
 
 									<!-- COMPANY LINKS -->
-									<div class="col-md-3 col-sm-12">
+									<div class="col-md-4 col-sm-12">
 
 										<h5>{{ __('Company') }}</h5>
 
@@ -222,9 +224,9 @@
 
 
 									<!-- CONNECTION & NEWS LINKS -->
-									<div class="col-md-3 col-sm-12 footer-connect pr-0">
+									<div class="col-md-4 col-sm-12 footer-connect pr-0">
 
-										<h5>{{ __('Social Media') }}</h5>
+										{{-- <h5>{{ __('Social Media') }}</h5>
 
 										<h6>{{ __('Follow up on social media to find out the latest updates') }}.</h6>
 
@@ -242,9 +244,9 @@
 												<a href="{{ config('frontend.social_facebook') }}" target="_blank"><li class="list-inline-item"><i class="footer-icon fa-brands fa-facebook"></i></li></a>
 											@endif
 
-										</ul>
+										</ul> --}}
 
-										<h5 class="mt-6 mb-4">{{ __('Get Started Today') }}</h5>
+										<h5 class="mb-4">{{ __('Get Started Today') }}</h5>
 
 										<a href="{{ route('register') }}" class="btn btn-primary pl-5 pr-5">{{ __('Try Now For Free') }}</a>
 

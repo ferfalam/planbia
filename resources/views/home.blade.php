@@ -4,22 +4,47 @@
     <link href="{{URL::asset('plugins/slick/slick.css')}}" rel="stylesheet" />
 	<link href="{{URL::asset('plugins/slick/slick-theme.css')}}" rel="stylesheet" />
     <link href="{{URL::asset('plugins/aos/aos.css')}}" rel="stylesheet" />
+    <style>
+        .h-50vh {
+            height: 50vh !important;
+        }
+    </style>
 @endsection
 
 @section('content')
 
         <section id="main-wrapper">
 
-            <div class="h-100vh justify-center min-h-screen" id="main-background">
+            <div class="h-100vh justify-center min-h-screen d-none d-md-block" id="main-background">
 
                 <div class="container h-100vh ">
                     <div class="row h-100vh vertical-center">
                         <div class="col-sm-12 upload-responsive">
                             <div class="text-container text-center">
                                 <h3 class="mb-4 font-weight-bold text-white" data-aos="fade-left" data-aos-delay="400" data-aos-once="true" data-aos-duration="700">{{ __('Meet') }}, {{ config('app.name') }}</span></h3>
-                                <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('The Future of Writing') }}</span></h1>
+                                <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('Your Personal Assistant') }}</span></h1>
                                 <h1 class=" mb-0 gradient fixed-height" id="typed" data-aos="fade-left" data-aos-delay="600" data-aos-once="true" data-aos-duration="900"></h1>
-                                <p class="fs-18 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Let AI create content for blogs, articles, websites, social media and more') }}</p>
+                                <p class="fs-18 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Let AI be your partner in your work and help you do a better job.') }}</p>
+
+                                <a target="_blank" href="{{ route('register') }}" class="btn btn-primary special-action-button" data-aos="fade-left" data-aos-delay="800" data-aos-once="true" data-aos-duration="1100">{{ __('Try Now For Free') }}</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="h-50vh justify-center min-h-screen d-block d-md-none" id="main-background">
+
+                <div class="container h-50vh ">
+                    <div class="row h-50vh vertical-center">
+                        <div class="col-sm-12 upload-responsive">
+                            <div class="text-container text-center">
+                                <h3 class="mb-4 font-weight-bold text-white" data-aos="fade-left" data-aos-delay="400" data-aos-once="true" data-aos-duration="700">{{ __('Meet') }}, {{ config('app.name') }}</span></h3>
+                                <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('Your Personal Assistant') }}</span></h1>
+                                <h1 class=" mb-0 gradient fixed-height" id="typed-mobile" data-aos="fade-left" data-aos-delay="600" data-aos-once="true" data-aos-duration="900"></h1>
+                                <p class="fs-18 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Let AI be your partner in your work and help you do a better job.') }}</p>
 
                                 <a target="_blank" href="{{ route('register') }}" class="btn btn-primary special-action-button" data-aos="fade-left" data-aos-delay="800" data-aos-once="true" data-aos-duration="1100">{{ __('Try Now For Free') }}</a>
 
@@ -45,7 +70,7 @@
 
                     <div class="row text-center mt-8 mb-8">
                         <div class="col-md-12 title">
-                            <h6><span>{{ config('app.name') }}</span> {{ __('Benefits') }}</h6>
+                            <h6> {{ __('Benefits') }} {{__('of')}} <span>{{ config('app.name') }}</span></h6>
                             <p>{{ __('Enjoy the full flexibility of the platform with ton of features') }}</p>
                         </div>
                     </div>
@@ -69,7 +94,7 @@
 
                                         <h5>{{ __('Latest AI technology') }}</h5>
 
-                                        <p>Lorem ipsum dolor sit amet est consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati unde.</p>
+                                        <p>{{__('Improve the quality of your writing with our application powered by the latest artificial intelligence technology, GPT-4. Get smarter, more accurate, and more contextual text suggestions than ever before.')}} </p>
 
                                     </div>
 
@@ -90,7 +115,7 @@
 
                                         <h5>{{ __('More than +25 Languages') }}</h5>
 
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati unde.</p>
+                                        <p>{{__('Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati unde.')}}</p>
 
                                     </div>
 
@@ -99,7 +124,7 @@
                             </div> <!-- END SOLUTION -->
 
                             <!-- SOLUTION -->
-                            <div class="col-sm-12 mb-6">
+                            {{-- <div class="col-sm-12 mb-6">
 
                                 <div class="solution" data-aos="zoom-in" data-aos-delay="2000" data-aos-once="true" data-aos-duration="2000">
 
@@ -117,7 +142,7 @@
 
                                 </div>
 
-                            </div> <!-- END SOLUTION -->
+                            </div> <!-- END SOLUTION --> --}}
                         </div>
 
                         <div class="col-md-4 col-sm-12 mt-7">
@@ -134,7 +159,7 @@
 
                                         <h5>{{ __('Edit AI Text Easily') }}</h5>
 
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati unde.</p>
+                                        <p>{{__('Edit AI-generated text with disconcerting ease thanks to our intuitive user interface. Add your personal touch, adjust the tone and structure according to your needs, all in just a few clicks.')}}</p>
 
                                     </div>
 
@@ -156,7 +181,7 @@
 
                                         <h5>{{ __('Export Text Results in PDF & Word') }}</h5>
 
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati unde.</p>
+                                        <p>{{__('Export your text results to PDF and Word formats, ready to be shared, printed or presented, saving you time and maximizing your productivity.')}}</p>
 
                                     </div>
 
@@ -166,7 +191,7 @@
 
 
                             <!-- SOLUTION -->
-                            <div class="col-sm-12 mb-6">
+                            {{-- <div class="col-sm-12 mb-6">
 
                                 <div class="solution" data-aos="zoom-in" data-aos-delay="2000" data-aos-once="true" data-aos-duration="2000">
 
@@ -184,7 +209,7 @@
 
                                 </div>
 
-                            </div> <!-- END SOLUTION -->
+                            </div> <!-- END SOLUTION --> --}}
                         </div>
 
                         <div class="col-md-4 col-sm-12 d-flex">
@@ -194,8 +219,8 @@
                                     <h4><span class="text-primary">{{ config('app.name') }}</span> {{ __('Uses most sophisticated Artificial Intelligence Technology') }}</h4>
                                 </div>
 
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quibusdam? Illum ad eius, molestiae placeat dicta quae, ab nihil omnis obcaecati reiciendis recusandae, voluptatem eos molestias aliquam saepe tenetur optio? Consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati.</p>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p>
+                                <p>{{__('Our platform offers an unparalleled conversational experience, allowing you to communicate in French with impressive accuracy and fluidity. With our built-in paraphrase tool, you can easily rephrase your messages, expressing your ideas clearly and concisely. In addition, our translator opens the doors to new opportunities by allowing you to communicate effectively in several major languages. With Saliatu, communication transcends linguistic boundaries.')}}</p>
+                                {{-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p> --}}
                             </div>
 
                         </div>
@@ -212,7 +237,7 @@
         <!-- SECTION - FEATURES - TEMPLATES
         ========================================================-->
         @if (config('frontend.features_section') == 'on')
-            <section id="features-wrapper">
+            <section id="features-wrapper" style="background-color: #edf8fd">
 
                 {!! adsense_frontend_features_728x90() !!}
 
@@ -349,7 +374,7 @@
 
          <!-- SECTION - BANNER
         ========================================================-->
-        <section id="banner-wrapper">
+        {{-- <section id="banner-wrapper">
 
             <div class="container">
 
@@ -423,7 +448,7 @@
                 </div>
             </div>
 
-        </section> <!-- END SECTION BANNER -->
+        </section> <!-- END SECTION BANNER --> --}}
 
 
         <!-- SECTION - PRICING
@@ -527,7 +552,7 @@
                                                                 <div class="pt-2 mb-7 prices-responsive">
                                                                     <div class="card border-0 p-4 pl-5 pr-5 pt-7 price-card @if ($subscription->featured) price-card-border @endif">
                                                                         @if ($subscription->featured)
-                                                                            <span class="plan-featured">{{ __('Most Popular') }}</span>
+                                                                            <span class="plan-featured  p-1">{{ __('Most Popular') }}</span>
                                                                         @endif
                                                                         <div class="plan">
                                                                             <div class="plan-title text-center">{{ $subscription->plan_name }}</div>
@@ -535,7 +560,7 @@
                                                                             <p class="plan-cost text-center mb-0"><span class="plan-currency-sign"></span>{!! config('payment.default_system_currency_symbol') !!}@if (config('payment.decimal_points') == 'allow') {{ number_format((float)$subscription->price, 2) }} @else {{ number_format($subscription->price) }} @endif</p>
                                                                             <p class="fs-12 text-center mb-3">{{ $subscription->currency }} / {{ __('Month') }}</p>
                                                                             <div class="text-center action-button mt-2 mb-5">
-                                                                                <a href="{{ route('user.plan.subscribe', $subscription->id) }}" class="btn btn-primary">{{ __('Subscribe Now') }}</a>
+                                                                                <a target="_blank" href="{{ env('APP_DASHBOARD_URL').'/user/pricing/plan/subscription/'.$subscription->id }}" class="btn btn-primary">{{ __('Subscribe Now') }}</a>
                                                                             </div>
                                                                             <p class="fs-12 text-center mb-3">{{ $subscription->secondary_heading }}</p>
                                                                             <ul class="fs-12 pl-3">
@@ -577,7 +602,7 @@
                                                                 <div class="pt-2 mb-7 prices-responsive">
                                                                     <div class="card border-0 p-4 pl-5 pr-5 pt-7 price-card @if ($subscription->featured) price-card-border @endif">
                                                                         @if ($subscription->featured)
-                                                                            <span class="plan-featured">{{ __('Most Popular') }}</span>
+                                                                            <span class="plan-featured  p-3">{{ __('Most Popular') }}</span>
                                                                         @endif
                                                                         <div class="plan">
                                                                             <div class="plan-title text-center">{{ $subscription->plan_name }}</div>
@@ -585,7 +610,7 @@
                                                                             <p class="plan-cost text-center mb-0"><span class="plan-currency-sign"></span>{!! config('payment.default_system_currency_symbol') !!}@if (config('payment.decimal_points') == 'allow') {{ number_format((float)$subscription->price, 2) }} @else {{ number_format($subscription->price) }} @endif</p>
                                                                             <p class="fs-12 text-center mb-3">{{ $subscription->currency }} / {{ __('Year') }}</p>
                                                                             <div class="text-center action-button mt-2 mb-4">
-                                                                                <a href="{{ route('user.plan.subscribe', $subscription->id) }}" class="btn btn-primary">{{ __('Subscribe Now') }}</a>
+                                                                                <a target="_blank" href="{{ env('APP_DASHBOARD_URL').'/user/pricing/plan/subscription/'.$subscription->id }}" class="btn btn-primary">{{ __('Subscribe Now') }}</a>
 
                                                                             </div>
                                                                             <p class="fs-12 text-center mb-3">{{ $subscription->secondary_heading }}</p>
@@ -628,7 +653,7 @@
                                                                     <div class="pt-2 mb-7 prices-responsive">
                                                                         <div class="card border-0 p-4 pl-5 pr-5 pt-7 price-card @if ($subscription->featured) price-card-border @endif">
                                                                             @if ($subscription->featured)
-                                                                                <span class="plan-featured">{{ __('Most Popular') }}</span>
+                                                                                <span class="plan-featured p-3">{{ __('Most Popular') }}</span>
                                                                             @endif
                                                                             <div class="plan">
                                                                                 <div class="plan-title text-center">{{ __($subscription->plan_name) }}</div>
@@ -919,12 +944,29 @@
 		$(function () {
 
             var typed = new Typed('#typed', {
-                strings: ['<h1><span>{{ __('Article Generator') }}</span></h1>',
-                            '<h1><span>{{ __('Content Improver') }}</span></h1>',
-                            '<h1><span>{{ __('Blog Sections') }}</span></h1>',
-                            '<h1><span>{{ __('Blog Ideas') }}</span></h1>',
-                            '<h1><span>{{ __('SEO Meta Descriptions') }}</span></h1>',
-                            '<h1><span>{{ __('FAQ Answers') }}</span></h1>',
+                strings: ['<h1><span>{{ __('Improve writing') }}</span></h1>',
+                            '<h1><span>{{ __('Fix spelling') }}</span></h1>',
+                            '<h1><span>{{ __('Fix grammar') }}</span></h1>',
+                            '<h1><span>{{ __('Summarize') }}</span></h1>',
+                            '<h1><span>{{ __('Translate') }}</span></h1>',
+                            // '<h1><span>{{ __('SEO Meta Descriptions') }}</span></h1>',
+                            // '<h1><span>{{ __('FAQ Answers') }}</span></h1>',
+                            '<h1><span>{{ __('And Many More!') }}</span></h1>'],
+                typeSpeed: 40,
+                backSpeed: 40,
+                backDelay: 2000,
+                loop: true,
+                showCursor: false,
+            });
+
+            var typed = new Typed('#typed-mobile', {
+                strings: ['<h1><span>{{ __('Improve writing') }}</span></h1>',
+                            '<h1><span>{{ __('Fix spelling') }}</span></h1>',
+                            '<h1><span>{{ __('Fix grammar') }}</span></h1>',
+                            '<h1><span>{{ __('Summarize') }}</span></h1>',
+                            '<h1><span>{{ __('Translate') }}</span></h1>',
+                            // '<h1><span>{{ __('SEO Meta Descriptions') }}</span></h1>',
+                            // '<h1><span>{{ __('FAQ Answers') }}</span></h1>',
                             '<h1><span>{{ __('And Many More!') }}</span></h1>'],
                 typeSpeed: 40,
                 backSpeed: 40,

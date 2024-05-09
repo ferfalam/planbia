@@ -1,5 +1,5 @@
 
- 
+
   /*-----Back to Top-----*/
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;800&display=swap');
 
@@ -20,7 +20,7 @@
 	background-position: center;
 	transition: background-color 0.1s linear;
 	box-shadow: $special-shadow;
-  
+
 	i {
 	  font-size: 16px;
 	}
@@ -31,7 +31,7 @@
 		display: inline-flex!important;
 	}
   }
-  
+
   .tabs-menu ul li {
 	a {
 	  padding: 5px 20px;
@@ -40,16 +40,16 @@
 	  border-radius: 4px;
 	  font-size: 12px;
 	  text-transform: uppercase;
-	  width: 100px;	  
+	  width: 100px;
 	}
-  
+
 	.active {
 	  color: $white !important;
 	  box-shadow: $special-shadow;
 	}
   }
-  
-  
+
+
   .tabs-menu-body {
 	padding: 15px;
 	border-radius: 0 0 5px 5px;
@@ -74,7 +74,7 @@
 			box-shadow: 0 0 12px rgba(33,33,33,.2)!important;
 
 			.plan-cost {
-				color: #007bff;
+				color: #8c52ff;
 			}
 
 			.prepaid-plan {
@@ -83,14 +83,14 @@
 				}
 
 				.plan-title {
-					color: #007bff;
+					color: #8c52ff;
 				}
 			}
 		}
 
 		.plan {
 			min-height: 380px;
-		}	
+		}
 
 		.plan-featured {
 			font-size: 12px;
@@ -193,25 +193,25 @@
 
 		}
 	}
-  
+
 	p:last-child {
 	  margin-bottom: 0;
 	}
   }
-  
+
   .tab-menu-heading {
 	padding: 20px;
 	border-bottom: 0;
 	border-radius: 5px 5px 0 0;
   }
 
-  
+
   #back-to-top:hover {
 	background: #fff;
 	line-height: 3;
 	border-color: #fff;
 
 	i {
-		color: #007bff;
+		color: #8c52ff;
 	}
   }

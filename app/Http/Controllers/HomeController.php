@@ -161,27 +161,26 @@ class HomeController extends Controller
                     return redirect()->back()->with('error', 'SMTP settings were not set yet, please contact support team. ' . $e->getMessage());
                 }
 
-                return redirect()->back()->with('success', 'Email was successfully sent');
+                return redirect()->back()->with('success', __('Email was successfully sent'));
 
             } else {
-                return redirect()->back()->with('error', 'Google reCaptcha Validation has Failed');
+                return redirect()->back()->with('error', __('Google reCaptcha Validation has Failed'));
             }
 
         } else {
-
             try {
 
                 Mail::to(config('mail.from.address'))->send(new ContactFormEmail($request));
 
                 if (Mail::flushMacros()) {
-                    return redirect()->back()->with('error', 'Sending email failed, please try again.');
+                    return redirect()->back()->with('error', __('Sending email failed, please try again.'));
                 }
 
             } catch (\Exception $e) {
-                return redirect()->back()->with('error', 'SMTP settings were not set yet, please contact support team. ' . $e->getMessage());
+                return redirect()->back()->with('error', __('SMTP settings were not set yet, please contact support team. ') . $e->getMessage());
             }
 
-            return redirect()->back()->with('success', 'Email was successfully sent');
+            return redirect()->back()->with('success', __('Email was successfully sent'));
         }
     }
 
