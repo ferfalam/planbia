@@ -64,7 +64,7 @@ trait InvoiceGeneratorTrait
 
         /* Header settings */
         $invoice->setLogo("img/brand/logo.png");
-        $invoice->setColor("#8c52ff");      // pdf color scheme
+        $invoice->setColor("#c02a90");      // pdf color scheme
         $invoice->setType("Invoice");    // Invoice Type
         $invoice->setReference($order_id);   // Reference
         $invoice->setDate(date('M dS ,Y',time()));   //Billing Date
@@ -120,7 +120,7 @@ trait InvoiceGeneratorTrait
 
         /* Header settings */
         $invoice->setLogo("img/brand/logo.png");
-        $invoice->setColor("#8c52ff");      // pdf color scheme
+        $invoice->setColor("#c02a90");      // pdf color scheme
         $invoice->setType("Invoice");    // Invoice Type
         $invoice->setReference($id->order_id);   // Reference
         $invoice->setDate(date('M dS ,Y',time()));   //Billing Date
@@ -189,7 +189,7 @@ trait InvoiceGeneratorTrait
 
         /* Header settings */
         $invoice->setLogo("img/brand/logo.png");
-        $invoice->setColor("#8c52ff");      // pdf color scheme
+        $invoice->setColor("#c02a90");      // pdf color scheme
         $invoice->setType("Invoice");    // Invoice Type
         $invoice->setReference($id->order_id);   // Reference
         $invoice->setDate(date('M dS ,Y',time()));   //Billing Date

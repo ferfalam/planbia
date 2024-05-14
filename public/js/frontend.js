@@ -10,19 +10,19 @@
     var urlImage = document.getElementById("image-url").textContent
     var image = document.getElementById("brand-img");
 
-    $(image).attr("src", urlImage+'/logo.png')
+    $(image).attr("src", urlImage+'/logo-white.png')
 
     $(window).on('scroll', function() {
 
       if($(document).scrollTop()>100) {
         $('#navbar-container').addClass('minimize-navbar');
         $('.nav-link').addClass('dark-color');
-        $(image).attr("src", urlImage+'/logo-dark.png')
+        $(image).attr("src", urlImage+'/logo.png')
       }
       else {
         $('#navbar-container').removeClass('minimize-navbar');
         $('.nav-link').removeClass('dark-color');
-        $(image).attr("src", urlImage+'/logo.png')
+        $(image).attr("src", urlImage+'/logo-white.png')
 
 
       }

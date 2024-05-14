@@ -67,8 +67,7 @@
 
 											<nav class="navbar navbar-expand-lg navbar-light w-100" id="navbar-responsive">
                                                 <span style="display: none" id="image-url">{{ URL::asset('img/brand/') }}</span>
-												<a class="navbar-brand d-none d-md-block" href="{{ url('/') }}"><img id="brand-img" alt=""></a>
-												<a class="navbar-brand d-block d-md-none" href="{{ url('/') }}"><img id="brand-mobile-img" src="{{ URL::asset('img/brand/logo-dark.png') }}" alt=""></a>
+												<a class="navbar-brand" href="{{ url('/') }}"><img id="brand-img"  src="{{ URL::asset('img/brand/logo.png') }}" alt=""></a>
 												<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 													<span class="navbar-toggler-icon"></span>
 												</button>
@@ -109,7 +108,7 @@
                                                                         <br class="d-block d-md-none">
 																		{{-- @if (config('settings.registration') == 'enabled') --}}
 																			{{-- @if (Route::has('register')) --}}
-																		<a href="{{ route('register') }}" target="_blank" class="ml-2 action-button register-button pl-5 pr-5">{{ __('Try Now For Free') }}</a>
+																		{{-- <a href="{{ route('register') }}" target="_blank" class="ml-2 action-button register-button pl-5 pr-5">{{ __('Try Now For Free') }}</a> --}}
 																			{{-- @endif --}}
 																		{{-- @endif --}}
 																	{{-- @endauth --}}

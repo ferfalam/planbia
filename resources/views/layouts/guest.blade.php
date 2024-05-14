@@ -65,8 +65,8 @@
 										<div class="row">
 
 											<nav class="navbar navbar-expand-lg navbar-light w-100" id="navbar-responsive">
-                                                <span style="display: none" id="image-url">{{ URL::asset('img/brand/') }}</span>
-												<a class="navbar-brand" href="{{ url('/') }}"><img id="brand-img" src="{{ URL::asset('img/brand/logo-gray.png') }}" alt=""></a>
+                                                {{-- <span style="display: none" id="image-url">{{ URL::asset('img/brand/') }}</span> --}}
+												<a class="navbar-brand" href="{{ url('/') }}"><img id="brand-img" src="{{ URL::asset('img/brand/logo.png') }}" alt=""></a>
 												<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 													<span class="navbar-toggler-icon"></span>
 												</button>
@@ -272,32 +272,32 @@
 		@endif
 
         <script>
-            $(document).ready(function() {
+            // $(document).ready(function() {
 
-                "use strict";
-                var urlImage = document.getElementById("image-url").textContent
-                var image = document.getElementById("brand-img");
+            //     "use strict";
+            //     var urlImage = document.getElementById("image-url").textContent
+            //     var image = document.getElementById("brand-img");
 
-                $(image).attr("src", urlImage+'/logo-gray.png')
+            //     $(image).attr("src", urlImage+'/logo-gray.png')
 
-                $(window).on('scroll', function() {
+            //     $(window).on('scroll', function() {
 
-                    if($(document).scrollTop()>100) {
-                        $('#navbar-container').addClass('minimize-navbar');
-                        $('.nav-link').addClass('dark-color');
-                        $(image).attr("src", urlImage+'/logo-dark.png')
-                    }
-                    else {
-                        $('#navbar-container').removeClass('minimize-navbar');
-                        $('.nav-link').removeClass('dark-color');
-                        $(image).attr("src", urlImage+'/logo-gray.png')
+            //         if($(document).scrollTop()>100) {
+            //             $('#navbar-container').addClass('minimize-navbar');
+            //             $('.nav-link').addClass('dark-color');
+            //             $(image).attr("src", urlImage+'/logo-dark.png')
+            //         }
+            //         else {
+            //             $('#navbar-container').removeClass('minimize-navbar');
+            //             $('.nav-link').removeClass('dark-color');
+            //             $(image).attr("src", urlImage+'/logo-gray.png')
 
 
-                    }
+            //         }
 
-                });
+            //     });
 
-            });
+            // });
         </script>
 
 

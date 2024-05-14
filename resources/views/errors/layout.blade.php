@@ -44,7 +44,7 @@
             .special-action-button {
                 font-family: "Poppins", sans-serif;
                 font-size: 12px;
-                background-color: #8c52ff;
+                background-color: #c02a90;
                 padding-left: 2rem;
                 padding-right: 2rem;
                 text-transform: none;

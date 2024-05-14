@@ -8,7 +8,56 @@
         .h-50vh {
             height: 50vh !important;
         }
+        #main-wrapper .navbar{
+            font-size: 18px !important;
+        }
+
+        #main-wrapper #login-button.btn-primary{
+            font-size: 18px
+        }
+
+        #main-wrapper .text-container a{
+            font-size: 20px !important
+        }
+
+        #features-wrapper .title h6,
+        #prices-wrapper .title h6,
+        #faq-wrapper .title h6,
+        #contact-wrapper .title h6{
+            font-size: 40px !important
+        }
+
+        #features-wrapper .title p,
+        #prices-wrapper .title p,
+        #faq-wrapper .title p,
+        #contact-wrapper .title p,
+        #monthly_plans h6{
+            font-size: 23px !important
+        }
+
+
+        @media screen and (max-width: 767px){
+            #main-wrapper .text-container a{
+                font-size: 15px !important
+            }
+
+            #features-wrapper .title h6,
+            #prices-wrapper .title h6,
+            #faq-wrapper .title h6,
+            #contact-wrapper .title h6,
+            #monthly_plans h6{
+                font-size: 20px !important
+            }
+
+            #features-wrapper .title p,
+            #prices-wrapper .title p,
+            #faq-wrapper .title p,
+            #contact-wrapper .title p{
+                font-size: 13px !important
+            }
+        }
     </style>
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endsection
 
 @section('content')
@@ -22,9 +71,9 @@
                         <div class="col-sm-12 upload-responsive">
                             <div class="text-container text-center">
                                 <h3 class="mb-4 font-weight-bold text-white" data-aos="fade-left" data-aos-delay="400" data-aos-once="true" data-aos-duration="700">{{ __('Meet') }}, {{ config('app.name') }}</span></h3>
-                                <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('Your Personal Assistant') }}</span></h1>
+                                <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('Editorial revolution with AI') }}</span></h1>
                                 <h1 class=" mb-0 gradient fixed-height" id="typed" data-aos="fade-left" data-aos-delay="600" data-aos-once="true" data-aos-duration="900"></h1>
-                                <p class="fs-18 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Let AI be your partner in your work and help you do a better job.') }}</p>
+                                <p class="fs-18 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Allow AI to become your work partner, guiding you to professional excellence.') }}</p>
 
                                 <a target="_blank" href="{{ route('register') }}" class="btn btn-primary special-action-button" data-aos="fade-left" data-aos-delay="800" data-aos-once="true" data-aos-duration="1100">{{ __('Try Now For Free') }}</a>
 
@@ -42,9 +91,9 @@
                         <div class="col-sm-12 upload-responsive">
                             <div class="text-container text-center">
                                 <h3 class="mb-4 font-weight-bold text-white" data-aos="fade-left" data-aos-delay="400" data-aos-once="true" data-aos-duration="700">{{ __('Meet') }}, {{ config('app.name') }}</span></h3>
-                                <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('Your Personal Assistant') }}</span></h1>
+                                <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('Editorial revolution with AI') }}</span></h1>
                                 <h1 class=" mb-0 gradient fixed-height" id="typed-mobile" data-aos="fade-left" data-aos-delay="600" data-aos-once="true" data-aos-duration="900"></h1>
-                                <p class="fs-18 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Let AI be your partner in your work and help you do a better job.') }}</p>
+                                <p class="fs-18 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Allow AI to become your work partner, guiding you to professional excellence.') }}</p>
 
                                 <a target="_blank" href="{{ route('register') }}" class="btn btn-primary special-action-button" data-aos="fade-left" data-aos-delay="800" data-aos-once="true" data-aos-duration="1100">{{ __('Try Now For Free') }}</a>
 
@@ -68,7 +117,7 @@
 
                 <div class="container">
 
-                    <div class="row text-center mt-8 mb-8">
+                    <div class="row text-center mb-2">
                         <div class="col-md-12 title">
                             <h6> {{ __('Benefits') }} {{__('of')}} <span>{{ config('app.name') }}</span></h6>
                             <p>{{ __('Enjoy the full flexibility of the platform with ton of features') }}</p>
@@ -79,7 +128,68 @@
                     <!-- LIST OF SOLUTIONS -->
                     <div class="row d-flex" id="solutions-list">
 
-                        <div class="col-md-4 col-sm-12">
+                        <div class="row d-flex align-items-center" style="background-color: #edf8fd">
+                            <div class="col-lg-6 col-md-12">
+                                <img src="{{ asset('img/features/latest-ai.png') }}" alt="{{ __('Latest AI technology') }}">
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="feature-text">
+                                    <div>
+                                        <h4><span class="text-primary">{{ __('Latest AI technology') }}</span></h4>
+                                    </div>
+
+                                    <p>{{__('Boost the quality of your writing with our application powered by advanced AI technology, GPT-4. Enjoy more intelligent, accurate and contextual text suggestions than ever before.')}}</p>
+                                    {{-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p> --}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row d-flex align-items-center">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="feature-text">
+                                    <div>
+                                        <h4><span class="text-primary">{{ __('All in one') }}</span></h4>
+                                    </div>
+
+                                    <p>{{__('Discover the power of Planb-ia.io, an all-in-one platform for writing, translating, summarizing and rephrasing your documents. Simplify your workflow, save time and maximize productivity with an integrated approach.')}}</p>
+                                    {{-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p> --}}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <img src="{{ asset('img/features/allinone.png') }}" alt="{{ __('All in one') }}">
+                            </div>
+                        </div>
+
+
+                        <div class="row d-flex align-items-center" style="background-color: #edf8fd">
+                            <div class="col-lg-6 col-md-12">
+                                <img src="{{ asset('img/features/multilanguages.png') }}" alt="{{ __('More than +25 Languages') }}">
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="feature-text">
+                                    <div>
+                                        <h4><span class="text-primary">{{ __('More than +25 Languages') }}</span></h4>
+                                    </div>
+
+                                    <p>{{__('Translate documents into more than 25 languages with ease. Expand your reach and communicate effectively with a global audience. Access a variety of languages for accurate and seamless translation, all in one platform.')}}</p>
+                                    {{-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p> --}}
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- END LIST OF SOLUTIONS -->
+
+
+                </div>
+
+            </section>
+        @endif
+
+
+        <!-- SECTION - FEATURES - TEMPLATES
+        ========================================================-->
+        @if (config('frontend.features_section') == 'on' and false)
+                                    <div class="col-md-4 col-sm-12">
                             <!-- SOLUTION -->
                             <div class="col-sm-12 mb-6">
 
@@ -124,7 +234,7 @@
                             </div> <!-- END SOLUTION -->
 
                             <!-- SOLUTION -->
-                            {{-- <div class="col-sm-12 mb-6">
+                            <div class="col-sm-12 mb-6">
 
                                 <div class="solution" data-aos="zoom-in" data-aos-delay="2000" data-aos-once="true" data-aos-duration="2000">
 
@@ -142,7 +252,7 @@
 
                                 </div>
 
-                            </div> <!-- END SOLUTION --> --}}
+                            </div> <!-- END SOLUTION -->
                         </div>
 
                         <div class="col-md-4 col-sm-12 mt-7">
@@ -191,7 +301,7 @@
 
 
                             <!-- SOLUTION -->
-                            {{-- <div class="col-sm-12 mb-6">
+                            <div class="col-sm-12 mb-6">
 
                                 <div class="solution" data-aos="zoom-in" data-aos-delay="2000" data-aos-once="true" data-aos-duration="2000">
 
@@ -209,7 +319,7 @@
 
                                 </div>
 
-                            </div> <!-- END SOLUTION --> --}}
+                            </div> <!-- END SOLUTION -->
                         </div>
 
                         <div class="col-md-4 col-sm-12 d-flex">
@@ -220,23 +330,9 @@
                                 </div>
 
                                 <p>{{__('Our platform offers an unparalleled conversational experience, allowing you to communicate in French with impressive accuracy and fluidity. With our built-in paraphrase tool, you can easily rephrase your messages, expressing your ideas clearly and concisely. In addition, our translator opens the doors to new opportunities by allowing you to communicate effectively in several major languages. With Saliatu, communication transcends linguistic boundaries.')}}</p>
-                                {{-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p> --}}
                             </div>
 
                         </div>
-
-                    </div> <!-- END LIST OF SOLUTIONS -->
-
-
-                </div>
-
-            </section>
-        @endif
-
-
-        <!-- SECTION - FEATURES - TEMPLATES
-        ========================================================-->
-        @if (config('frontend.features_section') == 'on')
             <section id="features-wrapper" style="background-color: #edf8fd">
 
                 {!! adsense_frontend_features_728x90() !!}
@@ -456,7 +552,7 @@
         @if (config('frontend.pricing_section') == 'on')
             <section id="prices-wrapper">
 
-                <div class="container pt-9">
+                <div class="container">
 
                     <!-- SECTION TITLE -->
                     <div class="row text-center">
@@ -543,7 +639,7 @@
 
                                                 @if ($monthly_subscriptions->count())
 
-                                                    <h6 class="font-weight-normal fs-12 text-center mb-6">{{ __('Subscribe to our Monthly Subscription Plans and enjoy ton of benefits') }}</h6>
+                                                    <h6 class="font-weight-normal text-center mb-6">{{ __('Subscribe to our Monthly Subscription Plans and enjoy ton of benefits') }}</h6>
 
                                                     <div class="row justify-content-md-center">
 
