@@ -132,7 +132,7 @@
 
 								<img src="{{ URL::asset('img/brand/logo-white.png') }}" alt="Brand Logo">
 
-								<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut culpa maiores maxime illo nostrum aut totam, porro dolore minima</p>
+								<p class="mb-0">{{__('Your new ally in writing dissertations, theses, and any other academic document. We combine state-of-the-art artificial intelligence with a user-friendly interface to give you an unparalleled writing experience.')}}</p>
 
 								<div class="dropdown header-locale" id="frontend-local">
 									<a class="nav-link icon" data-bs-toggle="dropdown">
@@ -163,32 +163,32 @@
 								<div class="row w-100">
 
 									<!-- INFORMATION LINKS -->
-									<div class="col-md-3 col-sm-12">
+									{{-- <div class="col-md-3 col-sm-12">
 
 										<h5>{{ __('Information') }}</h5>
 
 										<ul class="list-unstyled">
-											<li><a href="https://aws.amazon.com" target="_blank">{{ __('AWS Cloud') }}</a></li>
+											<li><a href="#" target="_blank">{{ __('AI World') }}</a></li>
 										</ul>
 
-									</div> <!-- END INFORMATION LINKS -->
+									</div> <!-- END INFORMATION LINKS --> --}}
 
 
 									<!-- SOLUTIONS LINKS -->
-									<div class="col-md-3 col-sm-12">
+									<div class="col-md-4 col-sm-12">
 
 										<h5>{{ __('Site Pages') }}</h5>
 
 										<ul class="list-unstyled">
-											<li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
-											<li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
+											<li><a href="{{ route('login')}}" target="_blank">{{ __('Login') }}</a></li>
+											<li><a href="{{ route('register') }}" target="_blank">{{ __('Try Now For Free') }}</a></li>
 										</ul>
 
 									</div> <!-- END SOLUTIONS LINKS -->
 
 
 									<!-- COMPANY LINKS -->
-									<div class="col-md-3 col-sm-12">
+									<div class="col-md-4 col-sm-12">
 
 										<h5>{{ __('Company') }}</h5>
 
@@ -201,9 +201,9 @@
 
 
 									<!-- CONNECTION & NEWS LINKS -->
-									<div class="col-md-3 col-sm-12 footer-connect pr-0">
+									<div class="col-md-4 col-sm-12 footer-connect pr-0">
 
-										<h5>{{ __('Social Media') }}</h5>
+										{{-- <h5>{{ __('Social Media') }}</h5>
 
 										<h6>{{ __('Follow up on social media to find out the latest updates') }}.</h6>
 
@@ -221,11 +221,11 @@
 												<a href="{{ config('frontend.social_facebook') }}" target="_blank"><li class="list-inline-item"><i class="footer-icon fa-brands fa-facebook"></i></li></a>
 											@endif
 
-										</ul>
+										</ul> --}}
 
-										<h5 class="mt-6 mb-4">{{ __('Get Started For Free') }}</h5>
+										<h5 class="mb-4">{{ __('Get Started Today') }}</h5>
 
-										<a href="{{ route('register') }}" class="btn btn-primary pl-5 pr-5">{{ __('Sign Up Now') }}</a>
+										<a href="{{ route('register') }}" class="btn btn-primary pl-5 pr-5">{{ __('Try Now For Free') }}</a>
 
 									</div> <!-- END CONNECTION & NEWS LINKS -->
 
@@ -244,7 +244,7 @@
 					<!-- COPYRIGHT INFORMATION -->
 					<div id="copyright" class="container">
 
-						<p class="copyright-left">{{ __('Copyright') }} © {{ date("Y") }} <a href="{{ config('app.url') }}">{{ config('app.name') }}</a> {{ __(' All rights reserved') }}</p>
+						<p class="copyright-left">{{ __('Copyright') }} © {{ date("Y") }} <a href="{{ config('app.url') }}">{{ config('app.name') }}</a> {{ __('All rights reserved') }}</p>
 
 						<div>
 							<p class="copyright-right"><a href="{{ route('terms') }}" target="_blank">{{ __('Terms & Conditions') }}</a></p>

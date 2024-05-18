@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'es' => [
-        'code' => 'es',
-        'display' => 'Español',
-        'flag' => 'es'
-    ],
+    // 'es' => [
+    //     'code' => 'es',
+    //     'display' => 'Español',
+    //     'flag' => 'es'
+    // ],
     'en' => [
         'code' => 'en',
         'display' => 'English',
