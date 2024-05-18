@@ -2,6 +2,10 @@
     display: block;
     font-size: 52px;
     color: transparent;
+    position: relative; /* Ajout */
+  }
+  head::before, head::after{
+    display: none;
   }
 
   head::before, head::after,
@@ -14,6 +18,7 @@
     content: ".";
     mix-blend-mode: screen;
     animation: 44s -27s move infinite ease-in-out alternate;
+    box-sizing: border-box;
   }
 
   #main-background::before {
@@ -42,9 +47,9 @@
 
   @keyframes move {
     from {
-      transform: rotate(0deg) scale(12) translateX(-20px);
+      transform: rotate(0deg) scale(12) translate(-50%, -50%); /* Modification */
     }
     to {
-      transform: rotate(360deg) scale(18) translateX(20px);
+      transform: rotate(360deg) scale(18) translate(-50%, -50%); /* Modification */
     }
   }

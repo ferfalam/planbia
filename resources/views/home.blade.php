@@ -5,6 +5,9 @@
 	<link href="{{URL::asset('plugins/slick/slick-theme.css')}}" rel="stylesheet" />
     <link href="{{URL::asset('plugins/aos/aos.css')}}" rel="stylesheet" />
     <style>
+        body{
+            overflow-x: hidden !important;
+        }
         .h-50vh {
             height: 50vh !important;
         }
@@ -54,6 +57,15 @@
             #faq-wrapper .title p,
             #contact-wrapper .title p{
                 font-size: 13px !important
+            }
+
+            #navbar-container{
+                background: transparent;
+                position: fixed !important;
+            }
+
+            .footer-connect .btn-primary{
+                font-size: 15px !important
             }
         }
     </style>
@@ -171,7 +183,7 @@
                                         <h4><span class="text-primary">{{ __('More than +25 Languages') }}</span></h4>
                                     </div>
 
-                                    <p>{{__('Translate documents into more than 25 languages with ease. Expand your reach and communicate effectively with a global audience. Access a variety of languages for accurate and seamless translation, all in one platform.')}}</p>
+                                    <p>{{__('Work on documents into more than 25 languages with ease. Expand your reach and communicate effectively with a global audience. Access a variety of languages for accurate and seamless translation, all in one platform.')}}</p>
                                     {{-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p> --}}
                                 </div>
                             </div>
@@ -653,7 +665,9 @@
                                                                         <div class="plan">
                                                                             <div class="plan-title text-center">{{ $subscription->plan_name }}</div>
                                                                             <p class="fs-12 text-center mb-3">{{ $subscription->primary_heading }}</p>
-                                                                            <p class="plan-cost text-center mb-0"><span class="plan-currency-sign"></span>{!! config('payment.default_system_currency_symbol') !!}@if (config('payment.decimal_points') == 'allow') {{ number_format((float)$subscription->price, 2) }} @else {{ number_format($subscription->price) }} @endif</p>
+                                                                            <p class="plan-cost text-center mb-0"><span class="plan-currency-sign"></span>{!! config('payment.default_system_currency_symbol') !!}@if (config('payment.decimal_points') == 'allow') {{ number_format((float)$subscription->price, 2) }} @else {{ number_format($subscription->price) }} @endif @if ($subscription->price > 0)
+                                                                                <span class="text-muted" style="font-size: 15px"><em><del>{{number_format((round($subscription->price)*1.5)-0.01, 2)}}</del></em>
+                                                                            @endif</span></p>
                                                                             <p class="fs-12 text-center mb-3">{{ $subscription->currency }} / {{ __('Month') }}</p>
                                                                             <div class="text-center action-button mt-2 mb-5">
                                                                                 <a target="_blank" href="{{ env('APP_DASHBOARD_URL').'/user/pricing/plan/subscription/'.$subscription->id }}" class="btn btn-primary">{{ __('Subscribe Now') }}</a>
@@ -935,7 +949,7 @@
                     <div class="row mb-8 text-center">
 
                         <div class="title w-100">
-                            <h6><span>{{ __('Contact') }}</span> {{ __('With Us') }}</h6>
+                            <h6><span>{{ __('Contact') }}</span> {{ __('Us') }}</h6>
                             <p>{{ __('Reach out to us for additional information') }}</p>
                         </div>
 
@@ -1044,7 +1058,7 @@
                             '<h1><span>{{ __('Fix spelling') }}</span></h1>',
                             '<h1><span>{{ __('Fix grammar') }}</span></h1>',
                             '<h1><span>{{ __('Summarize') }}</span></h1>',
-                            '<h1><span>{{ __('Translate') }}</span></h1>',
+                            // '<h1><span>{{ __('Translate') }}</span></h1>',
                             // '<h1><span>{{ __('SEO Meta Descriptions') }}</span></h1>',
                             // '<h1><span>{{ __('FAQ Answers') }}</span></h1>',
                             '<h1><span>{{ __('And Many More!') }}</span></h1>'],
@@ -1060,7 +1074,7 @@
                             '<h1><span>{{ __('Fix spelling') }}</span></h1>',
                             '<h1><span>{{ __('Fix grammar') }}</span></h1>',
                             '<h1><span>{{ __('Summarize') }}</span></h1>',
-                            '<h1><span>{{ __('Translate') }}</span></h1>',
+                            // '<h1><span>{{ __('Translate') }}</span></h1>',
                             // '<h1><span>{{ __('SEO Meta Descriptions') }}</span></h1>',
                             // '<h1><span>{{ __('FAQ Answers') }}</span></h1>',
                             '<h1><span>{{ __('And Many More!') }}</span></h1>'],

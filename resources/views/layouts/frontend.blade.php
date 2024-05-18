@@ -65,7 +65,7 @@
 									<div class="container">
 										<div class="row">
 
-											<nav class="navbar navbar-expand-lg navbar-light w-100" id="navbar-responsive">
+											<nav class="navbar navbar-expand-lg navbar-dark w-100" id="navbar-responsive">
                                                 <span style="display: none" id="image-url">{{ URL::asset('img/brand/') }}</span>
 												<a class="navbar-brand" href="{{ url('/') }}"><img id="brand-img"  src="{{ URL::asset('img/brand/logo.png') }}" alt=""></a>
 												<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

@@ -18,11 +18,15 @@
         $('#navbar-container').addClass('minimize-navbar');
         $('.nav-link').addClass('dark-color');
         $(image).attr("src", urlImage+'/logo.png')
+        $('#navbar-responsive').removeClass('navbar-dark')
+        $('#navbar-responsive').addClass('navbar-light')
       }
       else {
         $('#navbar-container').removeClass('minimize-navbar');
         $('.nav-link').removeClass('dark-color');
         $(image).attr("src", urlImage+'/logo-white.png')
+        $('#navbar-responsive').addClass('navbar-dark')
+        $('#navbar-responsive').removeClass('navbar-light')
 
 
       }
