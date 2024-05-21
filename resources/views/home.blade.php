@@ -68,6 +68,10 @@
                 font-size: 15px !important
             }
         }
+
+        #main-wrapper{
+            z-index: 99999;
+        }
     </style>
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endsection
@@ -83,9 +87,9 @@
                         <div class="col-sm-12 upload-responsive">
                             <div class="text-container text-center">
                                 <h3 class="mb-4 font-weight-bold text-white" data-aos="fade-left" data-aos-delay="400" data-aos-once="true" data-aos-duration="700">{{ __('Meet') }}, {{ config('app.name') }}</span></h3>
-                                <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('Editorial revolution with AI') }}</span></h1>
+                                <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('Your smart study partner') }}</span></h1>
                                 <h1 class=" mb-0 gradient fixed-height" id="typed" data-aos="fade-left" data-aos-delay="600" data-aos-once="true" data-aos-duration="900"></h1>
-                                <p class="fs-18 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Allow AI to become your work partner, guiding you to professional excellence.') }}</p>
+                                <p class="fs-20 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Allow AI to become your study partner, guiding you towards academic excellence.') }}</p>
 
                                 <a target="_blank" href="{{ route('register') }}" class="btn btn-primary special-action-button" data-aos="fade-left" data-aos-delay="800" data-aos-once="true" data-aos-duration="1100">{{ __('Try Now For Free') }}</a>
 
@@ -103,9 +107,9 @@
                         <div class="col-sm-12 upload-responsive">
                             <div class="text-container text-center">
                                 <h3 class="mb-4 font-weight-bold text-white" data-aos="fade-left" data-aos-delay="400" data-aos-once="true" data-aos-duration="700">{{ __('Meet') }}, {{ config('app.name') }}</span></h3>
-                                <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('Editorial revolution with AI') }}</span></h1>
+                                <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('Your smart study partner') }}</span></h1>
                                 <h1 class=" mb-0 gradient fixed-height" id="typed-mobile" data-aos="fade-left" data-aos-delay="600" data-aos-once="true" data-aos-duration="900"></h1>
-                                <p class="fs-18 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Allow AI to become your work partner, guiding you to professional excellence.') }}</p>
+                                <p class="fs-18 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Allow AI to become your study partner, guiding you towards academic excellence.') }}</p>
 
                                 <a target="_blank" href="{{ route('register') }}" class="btn btn-primary special-action-button" data-aos="fade-left" data-aos-delay="800" data-aos-once="true" data-aos-duration="1100">{{ __('Try Now For Free') }}</a>
 
@@ -139,6 +143,20 @@
 
                     <!-- LIST OF SOLUTIONS -->
                     <div class="row d-flex" id="solutions-list">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="feature-text">
+                                    <div>
+                                        <h4><span class="text-primary">{{ __('Idea and content generation') }}</span></h4>
+                                    </div>
+
+                                    <p>{{__('You can use Plan B-IA to generate ideas for essays, presentations, or other academic work. It can also help them draft or find the right words to express their thoughts.')}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <img src="{{ asset('img/features/allinone.png') }}" alt="{{ __('All in one') }}">
+                            </div>
+                        </div>
 
                         <div class="row d-flex align-items-center" style="background-color: #edf8fd">
                             <div class="col-lg-6 col-md-12">
@@ -147,11 +165,10 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="feature-text">
                                     <div>
-                                        <h4><span class="text-primary">{{ __('Latest AI technology') }}</span></h4>
+                                        <h4><span class="text-primary">{{ __('Homework assistance') }}</span></h4>
                                     </div>
 
-                                    <p>{{__('Boost the quality of your writing with our application powered by advanced AI technology, GPT-4. Enjoy more intelligent, accurate and contextual text suggestions than ever before.')}}</p>
-                                    {{-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p> --}}
+                                    <p>{{__('Plan B-IA uses an artificial inteligence capable of answering questions on various academic topics, offering explanations and examples to help students better understand the concepts.')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -160,30 +177,29 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="feature-text">
                                     <div>
-                                        <h4><span class="text-primary">{{ __('All in one') }}</span></h4>
+                                        <h4><span class="text-primary">{{ __('Research') }}</span></h4>
                                     </div>
 
-                                    <p>{{__('Discover the power of Planb-ia.io, an all-in-one platform for writing, translating, summarizing and rephrasing your documents. Simplify your workflow, save time and maximize productivity with an integrated approach.')}}</p>
+                                    <p>{{__('You can ask Plan B-IA questions to get basic information on specific topics, which can guide you in your academic research.')}}</p>
                                     {{-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p> --}}
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
-                                <img src="{{ asset('img/features/allinone.png') }}" alt="{{ __('All in one') }}">
+                                <img src="{{ asset('img/features/research.png') }}" alt="{{ __('Research') }}">
                             </div>
                         </div>
 
-
                         <div class="row d-flex align-items-center" style="background-color: #edf8fd">
                             <div class="col-lg-6 col-md-12">
-                                <img src="{{ asset('img/features/multilanguages.png') }}" alt="{{ __('More than +25 Languages') }}">
+                                <img src="{{ asset('img/features/editing.png') }}" alt="{{ __('Editing') }}">
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="feature-text">
                                     <div>
-                                        <h4><span class="text-primary">{{ __('More than +25 Languages') }}</span></h4>
+                                        <h4><span class="text-primary">{{ __('Editing') }}</span></h4>
                                     </div>
 
-                                    <p>{{__('Work on documents into more than 25 languages with ease. Expand your reach and communicate effectively with a global audience. Access a variety of languages for accurate and seamless translation, all in one platform.')}}</p>
+                                    <p>{{__('By submitting your work to Plan B-IA, you can get suggestions for editing, grammatical correction and style to improve the quality of your writing.')}}</p>
                                     {{-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p> --}}
                                 </div>
                             </div>
@@ -668,7 +684,8 @@
                                                                             <p class="plan-cost text-center mb-0"><span class="plan-currency-sign"></span>{!! config('payment.default_system_currency_symbol') !!}@if (config('payment.decimal_points') == 'allow') {{ number_format((float)$subscription->price, 2) }} @else {{ number_format($subscription->price) }} @endif @if ($subscription->price > 0)
                                                                                 <span class="text-muted" style="font-size: 15px"><em><del>{{number_format((round($subscription->price)*1.5)-0.01, 2)}}</del></em>
                                                                             @endif</span></p>
-                                                                            <p class="fs-12 text-center mb-3">{{ $subscription->currency }} / {{ __('Month') }}</p>
+                                                                            <p class="fs-12 text-center mb-3">{{ $subscription->currency }} (HT) / {{ __('Month') }}</p>
+
                                                                             <div class="text-center action-button mt-2 mb-5">
                                                                                 <a target="_blank" href="{{ env('APP_DASHBOARD_URL').'/user/pricing/plan/subscription/'.$subscription->id }}" class="btn btn-primary">{{ __('Subscribe Now') }}</a>
                                                                             </div>
