@@ -26,7 +26,8 @@
         #features-wrapper .title h6,
         #prices-wrapper .title h6,
         #faq-wrapper .title h6,
-        #contact-wrapper .title h6{
+        #contact-wrapper .title h6,
+        #blog-wrapper .title h6{
             font-size: 40px !important
         }
 
@@ -34,7 +35,8 @@
         #prices-wrapper .title p,
         #faq-wrapper .title p,
         #contact-wrapper .title p,
-        #monthly_plans h6{
+        #monthly_plans h6,
+        #blog-wrapper .title p{
             font-size: 23px !important
         }
 
@@ -48,14 +50,16 @@
             #prices-wrapper .title h6,
             #faq-wrapper .title h6,
             #contact-wrapper .title h6,
-            #monthly_plans h6{
+            #monthly_plans h6,
+            #blog-wrapper .title h6{
                 font-size: 20px !important
             }
 
             #features-wrapper .title p,
             #prices-wrapper .title p,
             #faq-wrapper .title p,
-            #contact-wrapper .title p{
+            #contact-wrapper .title p,
+            #blog-wrapper .title p{
                 font-size: 13px !important
             }
 
@@ -143,6 +147,21 @@
 
                     <!-- LIST OF SOLUTIONS -->
                     <div class="row d-flex" id="solutions-list">
+
+                        <div class="row d-flex align-items-center" style="background-color: #edf8fd">
+                            <div class="col-lg-6 col-md-12">
+                                <img src="{{ asset('img/features/homework.png') }}" alt="{{ __('Homework assistance') }}">
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="feature-text">
+                                    <div>
+                                        <h4><span class="text-primary">{{ __('Homework assistance') }}</span></h4>
+                                    </div>
+
+                                    <p>{{__('Plan B-IA uses an artificial inteligence capable of answering questions on various academic topics, offering explanations and examples to help students better understand the concepts.')}}</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row d-flex align-items-center">
                             <div class="col-lg-6 col-md-12">
                                 <div class="feature-text">
@@ -157,18 +176,18 @@
                                 <img src="{{ asset('img/features/ideasandcontent.png') }}" alt="{{ __('Idea and content generation') }}">
                             </div>
                         </div>
-
                         <div class="row d-flex align-items-center" style="background-color: #edf8fd">
                             <div class="col-lg-6 col-md-12">
-                                <img src="{{ asset('img/features/homework.png') }}" alt="{{ __('Homework assistance') }}">
+                                <img src="{{ asset('img/features/editing.png') }}" alt="{{ __('Editing') }}">
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="feature-text">
                                     <div>
-                                        <h4><span class="text-primary">{{ __('Homework assistance') }}</span></h4>
+                                        <h4><span class="text-primary">{{ __('Editing') }}</span></h4>
                                     </div>
 
-                                    <p>{{__('Plan B-IA uses an artificial inteligence capable of answering questions on various academic topics, offering explanations and examples to help students better understand the concepts.')}}</p>
+                                    <p>{{__('By submitting your work to Plan B-IA, you can get suggestions for editing, grammatical correction and style to improve the quality of your writing.')}}</p>
+                                    {{-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -189,21 +208,6 @@
                             </div>
                         </div>
 
-                        <div class="row d-flex align-items-center" style="background-color: #edf8fd">
-                            <div class="col-lg-6 col-md-12">
-                                <img src="{{ asset('img/features/editing.png') }}" alt="{{ __('Editing') }}">
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <div class="feature-text">
-                                    <div>
-                                        <h4><span class="text-primary">{{ __('Editing') }}</span></h4>
-                                    </div>
-
-                                    <p>{{__('By submitting your work to Plan B-IA, you can get suggestions for editing, grammatical correction and style to improve the quality of your writing.')}}</p>
-                                    {{-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p> --}}
-                                </div>
-                            </div>
-                        </div>
 
                     </div> <!-- END LIST OF SOLUTIONS -->
 
@@ -578,9 +582,9 @@
         <!-- SECTION - PRICING
         ========================================================-->
         @if (config('frontend.pricing_section') == 'on')
-            <section id="prices-wrapper">
+            <section id="prices-wrapper" style="background-color: #edf8fd">
 
-                <div class="container">
+                <div class="container pt-8">
 
                     <!-- SECTION TITLE -->
                     <div class="row text-center">
@@ -672,9 +676,9 @@
                                                     <div class="row justify-content-md-center">
 
                                                         @foreach ( $monthly_subscriptions as $subscription )
-                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                            <div class="col-lg-3 col-md-6 col-sm-12" >
                                                                 <div class="pt-2 mb-7 prices-responsive">
-                                                                    <div class="card border-0 p-4 pl-5 pr-5 pt-7 price-card @if ($subscription->featured) price-card-border @endif">
+                                                                    <div class="card border-0 p-4 pl-5 pr-5 pt-7 price-card @if ($subscription->featured) price-card-border @endif" >
                                                                         @if ($subscription->featured)
                                                                             <span class="plan-featured  p-1">{{ __('Most Popular') }}</span>
                                                                         @endif
@@ -849,7 +853,7 @@
 
                         <div class="title w-100">
                             <h6><span>{{ __('Latest') }}</span> {{ __('Blogs') }}</h6>
-                            <p>{{ __('Read our unique blog articles about various data archiving solutions and secrets') }}</p>
+                            <p>{{ __('Discover how Plan B-IA is revolutionizing academic writing with our series of informative articles on AI optimization.') }}</p>
                         </div>
 
                     </div> <!-- END SECTION TITLE -->
@@ -862,10 +866,11 @@
                             <div class="blog" data-aos="zoom-in" data-aos-delay="500" data-aos-once="true" data-aos-duration="1000">
                                 <div class="blog-box">
                                     <div class="blog-img">
-                                        <a href="{{ route('blogs.show', $blog->url) }}"><img src="{{ URL::asset($blog->image) }}" alt="Blog Image"></a>
+                                        <a href="{{ route('blogs.show', $blog->url) }}"><img src="{{ env('APP_DASHBOARD_URL').'/'.$blog->image }}" alt="Blog Image"></a>
                                     </div>
                                     <div class="blog-info">
-                                        <h6 class="blog-date text-left text-muted mt-3 pt-1 mb-4"><span class="mr-2">{{ $blog->created_by }}</span> | <i class="mdi mdi-alarm mr-2"></i>{{ date('j F Y', strtotime($blog->created_at)) }}</h6>
+                                        {{-- <span class="mr-2">{{ $blog->created_by }}</span> |  --}}
+                                        <h6 class="blog-date text-left text-muted mt-3 pt-1 mb-4"><i class="mdi mdi-alarm mr-2"></i>{{ date('j F Y', strtotime($blog->created_at)) }}</h6>
                                         <h5 class="blog-title fs-16 text-left mb-3">{{ __($blog->title) }}</h5>
                                     </div>
                                 </div>

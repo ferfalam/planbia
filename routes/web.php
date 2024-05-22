@@ -89,7 +89,7 @@ Route::get('/register', function () {
     return Redirect::to(env('APP_DASHBOARD_URL').'/register');
 })->name('register');
 Route::get('/login', function () {
-    return Redirect::to(env('APP_DASHBOARD_URL').'/register');
+    return Redirect::to(env('APP_DASHBOARD_URL').'/login');
 })->name('login');
 
 //FRONTEND ROUTES

@@ -33,15 +33,16 @@
 
                 <div class="col-md-12 col-sm-12">
                     <div class="blog">
-                        <img src="{{ URL::asset($blog->image) }}" alt="Blog Image">
+                        <img src="{{ env('APP_DASHBOARD_URL').'/'.$blog->image }}" alt="Blog Image">
                     </div>
                     <h6 class="fs-20 mt-6 font-weight-bold text-center">{{ $blog->title }}</h6>
-                    <p class="fs-12 text-center text-muted mb-5"><span><i class="mdi mdi-account-edit mr-1"></i>{{ $blog->created_by }}</span> / <span><i class="mdi mdi-alarm mr-1"></i>{{ date('F j, Y', strtotime($blog->created_at)) }}</span></p>
+                    {{-- <span><i class="mdi mdi-account-edit mr-1"></i>{{ $blog->created_by }}</span> /  --}}
+                    <p class="fs-12 text-center text-muted mb-5"><span><i class="mdi mdi-alarm mr-1"></i>{{ date('F j, Y', strtotime($blog->created_at)) }}</span></p>
 
                     <div class="fs-14" id="blog-view-mobile">{!! $blog->body !!}</div>
                 </div>
-     
-            </div>        
+
+            </div>
         </div>
 
     </section>
@@ -50,6 +51,6 @@
 @section('js')
 	<!-- Awselect JS -->
 	<script src="{{URL::asset('plugins/awselect/awselect.min.js')}}"></script>
-	<script src="{{URL::asset('js/awselect.js')}}"></script>  
-    <script src="{{URL::asset('js/minimize.js')}}"></script> 
+	<script src="{{URL::asset('js/awselect.js')}}"></script>
+    <script src="{{URL::asset('js/minimize.js')}}"></script>
 @endsection
