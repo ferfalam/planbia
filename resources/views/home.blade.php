@@ -154,13 +154,13 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
-                                <img src="{{ asset('img/features/allinone.png') }}" alt="{{ __('All in one') }}">
+                                <img src="{{ asset('img/features/ideasandcontent.png') }}" alt="{{ __('Idea and content generation') }}">
                             </div>
                         </div>
 
                         <div class="row d-flex align-items-center" style="background-color: #edf8fd">
                             <div class="col-lg-6 col-md-12">
-                                <img src="{{ asset('img/features/latest-ai.png') }}" alt="{{ __('Latest AI technology') }}">
+                                <img src="{{ asset('img/features/homework.png') }}" alt="{{ __('Homework assistance') }}">
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="feature-text">
