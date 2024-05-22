@@ -3,6 +3,23 @@
 @section('css')
 	<!-- Data Table CSS -->
 	<link href="{{URL::asset('plugins/awselect/awselect.min.css')}}" rel="stylesheet" />
+    <style>
+        .section-title .title h6{
+            font-size: 40px !important
+        }
+        .section-title .title p{
+            font-size: 23px !important
+        }
+
+        @media screen and (max-width: 767px){
+            .section-title .title h6{
+                font-size: 20px !important
+            }
+            .section-title .title p{
+                font-size: 13px !important
+            }
+        }
+    </style>
 @endsection
 
 @section('content')
