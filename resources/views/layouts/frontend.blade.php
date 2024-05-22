@@ -204,6 +204,7 @@
 										<ul class="list-unstyled">
 											<li><a href="{{ route('login')}}" target="_blank">{{ __('Login') }}</a></li>
 											<li><a href="{{ route('register') }}" target="_blank">{{ __('Try Now For Free') }}</a></li>
+											<li><a href="{{ route('blogs.show', 'guide-d-utilisation-de-plan-b-ia') }}" target="_blank">{{ __('User Guide') }}</a></li>
 										</ul>
 
 									</div> <!-- END SOLUTIONS LINKS -->
