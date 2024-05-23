@@ -150,7 +150,7 @@
 
                         <div class="row d-flex align-items-center" style="background-color: #edf8fd">
                             <div class="col-lg-6 col-md-12">
-                                <img src="{{ asset('img/features/homework.png') }}" alt="{{ __('Homework assistance') }}">
+                                <img src="{{ asset('img/features/homework.webp') }}" alt="{{ __('Homework assistance') }}">
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="feature-text">
@@ -173,12 +173,12 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
-                                <img src="{{ asset('img/features/ideasandcontent.png') }}" alt="{{ __('Idea and content generation') }}">
+                                <img src="{{ asset('img/features/ideasandcontent.webp') }}" alt="{{ __('Idea and content generation') }}">
                             </div>
                         </div>
                         <div class="row d-flex align-items-center" style="background-color: #edf8fd">
                             <div class="col-lg-6 col-md-12">
-                                <img src="{{ asset('img/features/editing.png') }}" alt="{{ __('Editing') }}">
+                                <img src="{{ asset('img/features/editing.webp') }}" alt="{{ __('Editing') }}">
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="feature-text">
@@ -204,7 +204,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
-                                <img src="{{ asset('img/features/research.png') }}" alt="{{ __('Research') }}">
+                                <img src="{{ asset('img/features/research.webp') }}" alt="{{ __('Research') }}">
                             </div>
                         </div>
 
