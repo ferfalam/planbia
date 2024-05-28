@@ -104,13 +104,13 @@
 
             </div>
 
-            <div class="h-50vh justify-center min-h-screen d-block d-md-none" id="main-background">
+            <div class="h-100vh justify-center min-h-screen d-block d-md-none" id="main-background">
 
-                <div class="container h-50vh ">
-                    <div class="row h-50vh vertical-center">
-                        <div class="col-sm-12 upload-responsive">
-                            <div class="text-container text-center">
-                                <h3 class="mb-4 font-weight-bold text-white" data-aos="fade-left" data-aos-delay="400" data-aos-once="true" data-aos-duration="700">{{ __('Meet') }}, {{ config('app.name') }}</span></h3>
+                <div class="container h-100vh ">
+                    <div class="row h-100 vertical-center">
+                        <div class="col-sm-12 h-30 upload-responsive">
+                            <div class="text-container text-center h-100 d-flex flex-column justify-content-between align-items-center">
+                                {{-- <h3 class="mb-4 font-weight-bold text-white" data-aos="fade-left" data-aos-delay="400" data-aos-once="true" data-aos-duration="700">{{ __('Meet') }}, {{ config('app.name') }}</span></h3> --}}
                                 <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('Your smart study partner') }}</span></h1>
                                 <h1 class=" mb-0 gradient fixed-height" id="typed-mobile" data-aos="fade-left" data-aos-delay="600" data-aos-once="true" data-aos-duration="900"></h1>
                                 <p class="fs-18 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Allow AI to become your study partner, guiding you towards academic excellence.') }}</p>
