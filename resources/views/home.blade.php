@@ -104,7 +104,7 @@
 
             </div>
 
-            <div class="h-100vh justify-center min-h-screen d-block d-md-none" id="main-background">
+            <div class="h-100vh justify-center min-h-screen d-block d-md-none" id="mobile-background">
 
                 <div class="container h-100vh ">
                     <div class="row h-100 vertical-center">
