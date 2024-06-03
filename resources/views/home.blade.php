@@ -590,7 +590,7 @@
                     <div class="row text-center">
 
                         <div class="title">
-                            <h6>{{ __('Various') }} <span>{{ __('Subscription') }}</span> {{ __('Plans') }}</h6>
+                            <h6>{{ __('Various') }} <span>{{ __('Subscription Plans') }}</span></h6>
                             <p>{{ __('Most competitive prices are guaranteed') }}</p>
                         </div>
 
@@ -852,7 +852,7 @@
                     <div class="row mb-8 mt-5">
 
                         <div class="title w-100">
-                            <h6><span>{{ __('Latest') }}</span> {{ __('Blogs') }}</h6>
+                            <h6>{{ __('Our') }} <span>{{ __('Latest') }}</span> {{ __('Blogs') }}</h6>
                             <p>{{ __('Discover how Plan B-IA is revolutionizing academic writing with our series of informative articles on AI optimization.') }}</p>
                         </div>
 
@@ -972,7 +972,7 @@
 
                         <div class="title w-100">
                             <h6><span>{{ __('Contact') }}</span> {{ __('Us') }}</h6>
-                            <p>{{ __('Reach out to us for additional information') }}</p>
+                            {{-- <p>{{ __('Reach out to us for additional information') }}</p> --}}
                         </div>
 
                     </div> <!-- END SECTION TITLE -->
