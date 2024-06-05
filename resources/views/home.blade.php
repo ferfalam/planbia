@@ -76,6 +76,10 @@
         #main-wrapper{
             z-index: 99999;
         }
+
+        .tabs-menu-body .card .plan-featured {
+            width: 140px !important
+        }
     </style>
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endsection
@@ -90,7 +94,7 @@
                     <div class="row h-100vh vertical-center">
                         <div class="col-sm-12 upload-responsive">
                             <div class="text-container text-center">
-                                <h3 class="mb-4 font-weight-bold text-white" data-aos="fade-left" data-aos-delay="400" data-aos-once="true" data-aos-duration="700">{{ __('Meet') }}, {{ config('app.name') }}</span></h3>
+                                {{-- <h3 class="mb-4 font-weight-bold text-white" data-aos="fade-left" data-aos-delay="400" data-aos-once="true" data-aos-duration="700">{{ __('Meet') }}, {{ config('app.name') }}</span></h3> --}}
                                 <h1 class=" text-white" data-aos="fade-left" data-aos-delay="500" data-aos-once="true" data-aos-duration="700">{{ __('Your smart study partner') }}</span></h1>
                                 <h1 class=" mb-0 gradient fixed-height" id="typed" data-aos="fade-left" data-aos-delay="600" data-aos-once="true" data-aos-duration="900"></h1>
                                 <p class="fs-20 text-white" data-aos="fade-left" data-aos-delay="700" data-aos-once="true" data-aos-duration="1100">{{ __('Allow AI to become your study partner, guiding you towards academic excellence.') }}</p>
@@ -604,7 +608,7 @@
                                 <div class="tab-menu-heading text-center">
                                     <div class="tabs-menu">
                                         <ul class="nav">
-                                            @if ($prepaid)
+                                            @if (!$prepaid)
                                                 <li><a href="#prepaid" class="@if (!$monthly && !$yearly && $prepaid) active @else '' @endif" data-bs-toggle="tab"> {{ __('Prepaid Plans') }}</a></li>
                                             @endif
                                             @if ($monthly)
@@ -625,7 +629,7 @@
                                 <div class="tabs-menu-body">
                                     <div class="tab-content">
 
-                                        @if ($prepaid)
+                                        @if (!$prepaid)
                                             <div class="tab-pane @if ((!$monthly && $prepaid) && (!$yearly && $prepaid)) active @else '' @endif" id="prepaid">
 
                                                 @if ($prepaids->count())
@@ -641,11 +645,11 @@
                                                                         <div class="plan prepaid-plan">
                                                                             <div class="plan-title">{{ $prepaid->plan_name }} <span class="prepaid-currency-sign">{{ $prepaid->currency }}</span><span class="plan-cost">@if (config('payment.decimal_points') == 'allow') {{ number_format((float)$prepaid->price, 2) }} @else {{ number_format($prepaid->price) }} @endif</span><span class="prepaid-currency-sign">{!! config('payment.default_system_currency_symbol') !!}</span></div>
                                                                                 <p class="fs-12 mt-2 mb-0">{{ __('Words Included') }}: <span class="ml-2 font-weight-bold text-primary">{{ number_format($prepaid->words) }}</span></p>
-                                                                                <p class="fs-12 mt-2 mb-0">{{ __('Images Included') }}: <span class="ml-2 font-weight-bold text-primary">{{ number_format($prepaid->images) }}</span></p>
+                                                                                {{-- <p class="fs-12 mt-2 mb-0">{{ __('Images Included') }}: <span class="ml-2 font-weight-bold text-primary">{{ number_format($prepaid->images) }}</span></p>
                                                                                 <p class="fs-12 mt-2 mb-0">{{ __('Characters Included') }}: <span class="ml-2 font-weight-bold text-primary">{{ number_format($prepaid->characters) }}</span></p>
-																                <p class="fs-12 mt-2 mb-4">{{ __('Minutes Included') }}: <span class="ml-2 font-weight-bold text-primary">{{ number_format($prepaid->minutes) }}</span></p>
+																                <p class="fs-12 mt-2 mb-4">{{ __('Minutes Included') }}: <span class="ml-2 font-weight-bold text-primary">{{ number_format($prepaid->minutes) }}</span></p> --}}
                                                                             <div class="text-center action-button mt-2 mb-2">
-                                                                                <a href="{{ route('user.prepaid.checkout', ['type' => 'prepaid', 'id' => $prepaid->id]) }}" class="btn btn-cancel">{{ __('Purchase') }}</a>
+                                                                                <a href="{{ env('APP_DASHBOARD_URL').'/user/pricing/plan/one-time?type=prepaid&id='. $prepaid->id }}" _target="blank" class="btn btn-cancel">{{ __('Purchase') }}</a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
